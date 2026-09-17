@@ -8,6 +8,7 @@ function openProjects() {
         document.getElementById("projectsOverlay");
 
     overlay.classList.add("active");
+    overlay.scrollTop = 0;
 
     document.body.style.overflow = "hidden";
 
@@ -25,7 +26,7 @@ function closeProjects() {
 
     overlay.classList.remove("active");
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1100) {
 
         document.body.style.overflowY = "auto";
 
@@ -161,7 +162,7 @@ function closeProjectDetails() {
     if (!document.getElementById("projectsOverlay").classList.contains("active")) {
 
         document.body.style.overflow =
-            window.innerWidth <= 768 ? "auto" : "hidden";
+            window.innerWidth <= 1100 ? "auto" : "hidden";
 
     }
 

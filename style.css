@@ -2582,7 +2582,7 @@ button.project-link {
 
 
 /* =====================================
-   RESPONSIVE — 768
+   RESPONSIVE — 768 (MOBILE & TABLET PORTRAIT)
 ===================================== */
 
 @media (max-width: 768px) {
@@ -2591,324 +2591,467 @@ button.project-link {
         overflow-y: auto;
     }
 
-
     .portfolio-container {
-        padding: 0 7%;
+        padding: 0 5%;
+        height: auto;
+        min-height: 100vh;
     }
-
 
     nav {
-        height: auto;
-
-        padding: 20px 0;
-
-        flex-direction: column;
-
-        gap: 12px;
+        height: 60px;
+        padding: 0 4px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(36, 56, 61, 0.7);
     }
 
+    .logo {
+        font-size: 21px;
+    }
 
     .nav-links {
-        gap: 17px;
+        gap: 16px;
     }
 
+    .nav-links a {
+        font-size: 11px;
+        padding: 6px 4px;
+    }
 
     .main-content {
         grid-template-columns: 1fr;
-
-        gap: 35px;
-
-        padding: 35px 0;
+        gap: 28px;
+        padding: 24px 0 32px;
     }
-
 
     .intro-section {
-        text-align: center;
-
-        align-items: center;
-    }
-
-
-    .identity-row {
-        flex-direction: column;
-
-        gap: 14px;
-
-        text-align: center;
-    }
-
-
-    .intro-section h1 {
-        font-size: 60px;
-
-        text-align: center;
-    }
-
-
-    .intro-description {
-        max-width: 500px;
-    }
-
-
-    .education-mini {
-        width: 100%;
-
+        align-items: flex-start;
         text-align: left;
     }
 
+    .availability-pill {
+        padding: 5px 10px;
+        font-size: 8px;
+        margin-bottom: 10px;
+    }
+
+    .identity-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+    }
+
+    .profile-photo-wrap {
+        width: 76px;
+        height: 76px;
+        flex: 0 0 76px;
+        border-radius: 50%;
+    }
+
+    .intro-section h1 {
+        font-size: clamp(34px, 9.5vw, 44px);
+        line-height: 1.05;
+        letter-spacing: -1.2px;
+        text-align: left;
+    }
+
+    .intro-section h2 {
+        font-size: clamp(15px, 4vw, 17px);
+        line-height: 1.35;
+        margin-top: 6px;
+    }
+
+    .intro-description {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.65;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 22px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+
+    .education-mini {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 12px;
+        text-align: left;
+    }
 
     .dashboard-section {
         grid-template-columns: 1fr;
+        gap: 14px;
+        width: 100%;
     }
 
+    .dashboard-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 
-    .dashboard-heading,
+    .dashboard-heading h2 {
+        font-size: clamp(20px, 5.5vw, 24px);
+        line-height: 1.15;
+    }
+
+    .dashboard-stamp {
+        align-items: flex-start;
+        border-left: none;
+        border-top: 2px solid #ef8668;
+        padding: 6px 0 0;
+    }
+
     .about-card,
     .skills-card,
     .projects-main-card,
     .contact-card {
+        padding: 18px 16px;
+        border-radius: 16px;
         grid-column: 1;
     }
 
-
-    .dashboard-heading {
-        align-items: flex-start;
-
-        flex-direction: column;
+    .about-text {
+        font-size: 12.5px;
+        line-height: 1.65;
     }
 
-
-    .dashboard-stamp {
-        align-items: flex-start;
-
-        border-left: none;
-
-        border-top: 2px solid #ef8668;
-
-        padding: 8px 0 0;
+    .about-metrics {
+        gap: 20px;
+        justify-content: space-around;
     }
-
 
     .projects-main-card {
+        flex-direction: column;
         align-items: flex-start;
-
-        flex-wrap: wrap;
+        gap: 14px;
     }
-
 
     .open-projects {
+        width: 100%;
+        text-align: center;
         margin-left: 0;
+        padding: 11px 16px;
+        font-size: 12px;
+        font-weight: 600;
     }
-
 
     .contact-card {
         flex-direction: column;
-
         align-items: flex-start;
+        gap: 14px;
     }
 
-
     .social-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .social-links a {
+        flex: 1 1 calc(33.33% - 8px);
+        min-width: 85px;
+        text-align: center;
+        padding: 9px 8px;
+        font-size: 11px;
+    }
+
+    /* PROJECTS OVERLAY ON MOBILE */
+    .redesign-overlay {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        max-height: none;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 68px 16px 40px;
+        display: none;
+        align-items: flex-start;
         justify-content: flex-start;
     }
 
-
-    /* PROJECT PAGE */
-
-    .redesign-overlay {
-        padding: 85px 20px 40px;
-    }
-
-
-    .redesign-overlay .projects-page {
-        padding-top: 0;
-    }
-
-
-    .redesign-overlay .back-button {
-        top: 18px;
-        left: 18px;
-    }
-
-
-    .redesign-overlay .projects-header {
-        margin-bottom: 30px;
-
-        padding-left: 15px;
-    }
-
-
-    .redesign-overlay .projects-header h2 {
-        font-size: 42px;
-    }
-
-
-    .redesign-overlay .projects-carousel {
+    .redesign-overlay.active {
         display: block;
     }
 
-
-    .redesign-overlay .projects-list {
-        overflow-x: auto;
-
-        gap: 18px;
-
-        scroll-snap-type: x mandatory;
+    .redesign-overlay .projects-page {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        display: block;
+        width: 100%;
     }
 
-
-    .redesign-overlay .project-item {
-        flex: 0 0 100%;
-
-        min-height: auto;
-
-        padding: 25px;
-
-        scroll-snap-align: center;
+    .redesign-overlay .back-button {
+        top: 14px;
+        left: 16px;
+        padding: 8px 14px;
+        font-size: 11px;
+        z-index: 99999;
     }
 
+    .redesign-overlay .projects-header {
+        margin-bottom: 20px;
+        padding-left: 12px;
+        border-left: 3.5px solid #f0765a;
+    }
+
+    .redesign-overlay .projects-header h2 {
+        font-size: clamp(24px, 6.5vw, 30px);
+    }
+
+    .redesign-overlay .projects-header > p:last-child {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .redesign-overlay .projects-carousel {
+        display: block;
+        width: 100%;
+    }
 
     .redesign-overlay .projects-scroll-button {
         display: none;
     }
 
+    .redesign-overlay .projects-list {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;
+    }
+
+    .redesign-overlay .project-item {
+        flex: 0 0 100%;
+        min-width: 100%;
+        padding: 20px 16px;
+        border-radius: 16px;
+        scroll-snap-align: center;
+    }
+
+    .redesign-overlay .project-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
+    }
+
+    .redesign-overlay .project-case-badge {
+        font-size: 9.5px;
+        padding: 3px 8px;
+    }
+
+    .redesign-overlay .project-number {
+        font-size: 10px;
+    }
 
     .redesign-overlay .project-details h3 {
-        font-size: 27px;
+        font-size: clamp(20px, 5.5vw, 23px);
+        margin-bottom: 6px;
     }
 
+    .redesign-overlay .project-metric-strip {
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .redesign-overlay .project-metric-badge {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
 
     .redesign-overlay .project-details > p {
-        font-size: 11px;
-
-        line-height: 1.75;
+        font-size: 12.5px;
+        line-height: 1.6;
+        margin-bottom: 12px;
     }
 
+    .redesign-overlay .project-tags {
+        gap: 6px;
+        margin-bottom: 14px;
+    }
+
+    .redesign-overlay .project-tags span {
+        font-size: 10px;
+        padding: 4px 9px;
+    }
 
     .redesign-overlay .project-links {
         flex-direction: column;
-
-        align-items: stretch;
+        width: 100%;
+        gap: 8px;
     }
-
 
     .redesign-overlay .project-link {
+        width: 100%;
         justify-content: center;
+        text-align: center;
+        padding: 10px 14px;
+        font-size: 12px;
     }
 
+    .projects-nav-strip {
+        margin-top: 14px;
+        gap: 8px;
+    }
+
+    .projects-carousel-dots {
+        gap: 6px;
+    }
+
+    .project-dot {
+        padding: 4px 10px;
+        font-size: 9.5px;
+    }
+
+    /* PROJECT DETAIL MODAL ON MOBILE */
+    .redesign-overlay.project-detail-overlay {
+        padding: 12px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .redesign-overlay.project-detail-overlay.active {
+        display: flex;
+        align-items: flex-start;
+    }
 
     .redesign-overlay .project-detail-modal {
-        max-height: 92vh;
-
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-height: none;
+        margin: 16px 0;
         border-radius: 16px;
     }
 
-
-    .redesign-overlay .project-detail-image-wrap {
-        min-height: 210px;
-
-        padding: 20px;
+    .redesign-overlay .project-detail-close {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 
+    .redesign-overlay .project-detail-image-wrap {
+        position: relative;
+        min-height: 160px;
+        padding: 16px 12px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .redesign-overlay .project-detail-image {
+        max-height: 220px;
+    }
 
     .redesign-overlay .project-detail-content {
-        padding: 30px 23px;
+        padding: 18px 14px 22px;
+    }
+
+    .redesign-overlay .project-detail-content h2 {
+        font-size: clamp(20px, 5.5vw, 24px);
+        margin-bottom: 10px;
+    }
+
+    .case-stats-grid,
+    .case-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .redesign-overlay .project-detail-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 10px 16px;
+        font-size: 11px;
     }
 
 }
 
 
 /* =====================================
-   RESPONSIVE — 450
+   RESPONSIVE — 480 (COMPACT SMARTPHONES)
 ===================================== */
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
 
     .portfolio-container {
-        padding: 0 6%;
+        padding: 0 4%;
     }
 
+    nav {
+        padding: 0 2px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .identity-row {
+        gap: 12px;
+    }
+
+    .profile-photo-wrap {
+        width: 66px;
+        height: 66px;
+        flex: 0 0 66px;
+    }
 
     .intro-section h1 {
-        font-size: 50px;
-
-        letter-spacing: -2px;
+        font-size: clamp(30px, 9vw, 38px);
+        letter-spacing: -1px;
     }
-
 
     .intro-section h2 {
-        font-size: 16px;
+        font-size: 14.5px;
     }
 
-
-    .hero-buttons {
-        flex-direction: column;
-
-        width: 100%;
+    .about-metrics {
+        gap: 12px;
     }
 
-
-    .btn {
-        width: 100%;
-
-        text-align: center;
+    .about-metrics strong {
+        font-size: 18px;
     }
 
-
-    .projects-main-card {
-        align-items: flex-start;
+    .social-links a {
+        flex: 1 1 100%;
+        min-width: 100%;
     }
-
-
-    .open-projects {
-        width: 100%;
-    }
-
-
-    /* PROJECT PAGE */
 
     .redesign-overlay {
-        padding-left: 15px;
-
-        padding-right: 15px;
+        padding: 64px 12px 30px;
     }
-
-
-    .redesign-overlay .projects-header h2 {
-        font-size: 36px;
-    }
-
-
-    .redesign-overlay .projects-header > p:last-child {
-        font-size: 11px;
-    }
-
 
     .redesign-overlay .project-item {
-        padding: 22px;
+        padding: 16px 14px;
     }
-
-
-    .redesign-overlay .project-icon {
-        width: 54px;
-        height: 54px;
-
-        font-size: 24px;
-    }
-
 
     .redesign-overlay .project-details h3 {
-        font-size: 24px;
-    }
-
-
-    .redesign-overlay .project-detail-content {
-        padding: 26px 20px;
-    }
-
-    .case-stats-grid,
-    .case-feature-grid {
-        grid-template-columns: 1fr;
+        font-size: 19px;
     }
 
 }
