@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c2d33"/>
+      <stop offset="100%" stop-color="#0e171b"/>
+    </linearGradient>
+    <linearGradient id="favText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93ecd3"/>
+      <stop offset="100%" stop-color="#72c9a5"/>
+    </linearGradient>
+    <filter id="favGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#72c9a5" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Badge -->
+  <rect width="64" height="64" rx="16" fill="url(#favBg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="#2e484e" stroke-width="1.8"/>
+
+  <!-- Brand Monogram HF -->
+  <g filter="url(#favGlow)">
+    <text x="10" y="44" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Space Grotesk', sans-serif" 
+          font-size="28" 
+          font-weight="800" 
+          letter-spacing="-0.5" 
+          fill="url(#favText)">HF</text>
+  </g>
+
+  <!-- Coral Brand Dot -->
+  <circle cx="53" cy="41" r="4.5" fill="#ef8668"/>
+</svg>
